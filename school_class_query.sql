@@ -81,3 +81,13 @@ JOIN course c
 ON shc.course_course_id = c.course_id
 GROUP BY course_course_id
 ORDER BY AVG(grade_total) ASC;
+
+--  Student and Professor with most courses in common --
+SELECT professor_name, student_name, course_name
+FROM student s
+JOIN student_has_course shc
+ON shc.student_student_id = s.student_id
+JOIN course c
+On c.course_id = shc.course_course_id
+JOIN professor p
+ON p.professor_id = c.professor_professor_id

@@ -29,3 +29,9 @@ VALUES (9, "Foreign Language", 10);
 
 INSERT INTO course (course_id, course_name, professor_professor_id)
 VALUES (10, "Culinary Arts", 8);
+
+INSERT INTO course (course_id, course_name, professor_professor_id)
+VALUES (11, "Foreign Language", 11);
+
+INSERT INTO course (course_id, course_name, professor_professor_id)
+VALUES (12, "Trigonometry", 11);

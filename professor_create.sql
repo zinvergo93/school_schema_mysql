@@ -29,3 +29,6 @@ VALUES ("Nolan Grant");
 
 INSERT INTO professor(professor_name)
 VALUES ("Lisa Blicker");
+
+INSERT INTO professor(professor_name)
+VALUES("Erik Svardson")
