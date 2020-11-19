@@ -12,6 +12,7 @@ FROM course;
 SELECT * 
 FROM student_has_course;
 
+-- 10 queries to see average grade given by each professor --
 SELECT AVG (grade_total)
 FROM student_has_course
 WHERE course_professor_professor_id = 1;
@@ -53,6 +54,7 @@ FROM student_has_course
 WHERE course_professor_professor_id = 10;
 
 
+-- Table illustrating All grades for each student, descending --
 SELECT 'Student name: ', student_name, 'Course: ', course_name, 'Grade: ',  grade_total, 'Professor: ', professor_name
 FROM student s
 JOIN student_has_course shc
@@ -61,4 +63,21 @@ JOIN course c
 ON c.course_id = shc.course_course_id
 JOIN professor p
 ON p.professor_id = course_professor_professor_id
-ORDER BY student_id ASC, grade_total DESC
+ORDER BY student_id ASC, grade_total DESC;
+
+-- Students grouped by course name --
+SELECT 'Student name: ', student_name, 'Course: ', course_name
+FROM student s
+JOIN student_has_course shc
+ON shc.student_student_id = s.student_id
+JOIN course c
+ON c.course_id = shc.course_course_id
+ORDER BY course_id;
+
+-- Summary report, Sorted by most challenging to least challenging by AVG GRADE -- 
+SELECT course_name, AVG(grade_total)
+FROM student_has_course shc
+JOIN course c
+ON shc.course_course_id = c.course_id
+GROUP BY course_course_id
+ORDER BY AVG(grade_total) ASC;
