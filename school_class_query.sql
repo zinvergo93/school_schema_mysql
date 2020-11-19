@@ -7,5 +7,5 @@ FROM professor;
 SELECT * 
 FROM course;
 
-SELECT *
-FROM grade;
+SELECT * 
+FROM student_has_course

@@ -26,13 +26,6 @@ CREATE TABLE IF NOT EXISTS `school_class_schema`.`course` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `school_class_schema`.`grade` (
-  `grade_id` INT NOT NULL AUTO_INCREMENT,
-  `grade_total` FLOAT NOT NULL,
-  PRIMARY KEY (`grade_id`),
-  UNIQUE INDEX `grade_id_UNIQUE` (`grade_id` ASC) VISIBLE)
-ENGINE = InnoDB;
-
 CREATE TABLE IF NOT EXISTS `school_class_schema`.`student_has_course` (
   `student_student_id` INT NOT NULL,
   `course_course_id` INT NOT NULL,
